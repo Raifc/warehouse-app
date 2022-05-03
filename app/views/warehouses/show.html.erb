@@ -1,0 +1,41 @@
+<style>
+    h1 {
+        text-align: center;
+        color: white;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(112, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+        width: 600px;
+        margin: 0 auto 10px;
+        border-radius: 25px;
+    }
+
+    h3 {
+        background: rgb(204, 236, 209);
+        background: linear-gradient(90deg, rgba(204, 236, 209, 1) 0%, rgba(25, 229, 174, 1) 100%, rgba(16, 167, 146, 1) 100%);
+        text-align: center;
+        margin-bottom: 10px;
+        width: 350px;
+        margin: 0 auto 10px;
+        border-radius: 25px;
+    }
+
+
+    p {
+        text-align: center;
+        font-style: italic;
+        width: 300px;
+        margin: 0 auto 10px;
+        border-radius: 25px;
+    }
+
+</style>
+
+<h1> Galpao <%= @warehouse.code %></h1>
+<h3><%= @warehouse.description %></h3>
+<div>
+  <p><strong>Nome: </strong> <%= @warehouse.name %></p>
+  <p><strong>Cidade: </strong> <%= @warehouse.city %></p>
+  <p><strong>Area: </strong> <%= @warehouse.area %> m2</p>
+  <p><strong>Endereco: </strong> <%= @warehouse.adress %> <strong>CEP: </strong> <%= @warehouse.zip_code %></p>
+
+</div>
