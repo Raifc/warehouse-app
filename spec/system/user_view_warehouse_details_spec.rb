@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Usuario visualiza detalhes de um galpao' do
   it 'deve ver informacoes adicionais' do
     Warehouse.create(name: 'Aeroporto SP', code: 'GRU', city: 'Guarulhos',
-                     area: 100000, adress: 'Avenida do Aeroporto, 1000',
+                     area: 100000, address: 'Avenida do Aeroporto, 1000',
                      zip_code: '15000-000', description: 'Galpao de cargas internacionais')
     visit(root_path)
     click_on 'Aeroporto SP'
@@ -18,7 +18,7 @@ describe 'Usuario visualiza detalhes de um galpao' do
 
   it 'e retorna para a tela inicial' do
     Warehouse.create(name: 'Aeroporto SP', code: 'GRU', city: 'Guarulhos',
-                     area: 100000, adress: 'Avenida do Aeroporto, 1000',
+                     area: 100000, address: 'Avenida do Aeroporto, 1000',
                      zip_code: '15000-000', description: 'Galpao de cargas internacionais')
     visit(root_path)
     click_on 'Aeroporto SP'

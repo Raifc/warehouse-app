@@ -1,42 +1,42 @@
 <h1>Novo Galpao</h1>
 
 <%= form_with(model: Warehouse.new) do |f| %>
-  <div>
+  <div id = 'name'>
     <%= f.label :name, 'Nome' %>
     <%= f.text_field :name %>
   </div>
 
-  <div>
+  <div id = 'description'>
     <%= f.label :description, 'Descricao' %>
     <%= f.text_field :description %>
   </div>
 
-  <div>
+  <div id = 'code'>
     <%= f.label :code, 'Codigo' %>
     <%= f.text_field :code %>
   </div>
 
-  <div>
-    <%= f.label :adress, 'Endereco' %>
-    <%= f.text_field :adress %>
+  <div id = 'address'>
+    <%= f.label :address, 'Endereco' %>
+    <%= f.text_field :address %>
   </div>
 
-  <div>
+  <div id = 'city'>
     <%= f.label :city, 'Cidade' %>
     <%= f.text_field :city %>
   </div>
 
-  <div>
+  <div id = 'zip_code'>
     <%= f.label :zip_code, 'CEP' %>
     <%= f.text_field :zip_code %>
   </div>
 
-  <div>
+  <div id = 'area'>
     <%= f.label :area, 'Area' %>
     <%= f.number_field :area %>
   </div>
 
-  <div>
+  <div id = 'submit'>
     <%= f.submit 'Enviar' %>
   </div>
 

@@ -19,10 +19,27 @@ h3 {
 }
 
 
-p {
+p, dl, dt, dd {
     text-align: center;
     font-style: italic;
-    width: 300px;
+    width: 500px;
     margin: 0 auto 10px;
     border-radius: 25px;
+}
+
+
+#name, #description, #code, #address, #city, #area, #zip_code, #warehouses {
+    text-align: center;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 500px;
+    margin: 0 auto 30px;
+    background: rgb(204, 236, 209);
+    background: linear-gradient(90deg, rgba(204, 236, 209, 1) 0%, rgba(25, 229, 174, 1) 100%, rgba(16, 167, 146, 1) 100%);
+}
+
+#submit {
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto 10px;
 }
