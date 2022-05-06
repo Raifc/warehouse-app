@@ -38,11 +38,16 @@ describe 'Usuario cadastra um novo galpao' do
     visit root_path
 
     click_on 'Cadastrar Galpao'
-    fill_in 'Nome', with: 'Rio de Janeiro'
-    fill_in 'Descricao', with: 'Galpao do RJ'
-    fill_in 'Codigo', with: 'RIO'
+    fill_in 'Nome', with: ''
     click_on 'Enviar'
 
     expect(page).to have_content 'Galpao nao cadastrado!'
+    expect(page).to have_content 'Nome não pode ficar em branco'
+    expect(page).to have_content 'Codigo não pode ficar em branco'
+    expect(page).to have_content 'Cidade não pode ficar em branco'
+    expect(page).to have_content 'Descricao não pode ficar em branco'
+    expect(page).to have_content 'Endereco não pode ficar em branco'
+    expect(page).to have_content 'CEP não pode ficar em branco'
+    expect(page).to have_content 'Area não pode ficar em branco'
   end
 end
