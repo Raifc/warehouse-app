@@ -28,8 +28,21 @@ describe 'Usuario cadastra um novo galpao' do
     click_on 'Enviar'
 
     expect(current_path).to eq root_path
+    expect(page).to have_content 'Galpao cadastrado com sucesso'
     expect(page).to have_content 'Rio de Janeiro'
     expect(page).to have_content 'RIO'
     expect(page).to have_content '35000 m2'
+  end
+
+  it 'com dados incorretos' do
+    visit root_path
+
+    click_on 'Cadastrar Galpao'
+    fill_in 'Nome', with: 'Rio de Janeiro'
+    fill_in 'Descricao', with: 'Galpao do RJ'
+    fill_in 'Codigo', with: 'RIO'
+    click_on 'Enviar'
+
+    expect(page).to have_content 'Galpao nao cadastrado!'
   end
 end

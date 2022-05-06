@@ -8,8 +8,10 @@ describe 'Usuario visita tela inicial' do
   end
 
   it 'e ve galpoes cadastrados' do
-    Warehouse.create(name: 'Rio', code: 'SDU', city: 'Rio de Janeiro', area: 60_000)
-    Warehouse.create(name: 'Maceio', code: 'MCZ', city: 'Maceio', area: 50_000)
+    Warehouse.create(name: 'Rio', code: 'SDU', city: 'Rio de Janeiro', area: 60_000, address: 'Av um, 300',
+                     zip_code: '20000-000', description: 'Galpao do Rio de Janeiro')
+    Warehouse.create(name: 'Maceio', code: 'MCZ', city: 'Maceio', area: 50_000, address: 'Av Maceio, 100',
+                     zip_code: '80000-000', description: 'Galpao de Maceio')
 
     visit(root_path)
 

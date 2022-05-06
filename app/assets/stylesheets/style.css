@@ -43,3 +43,10 @@ p, dl, dt, dd {
     font-weight: bold;
     margin: 0 auto 10px;
 }
+
+#notice {
+    margin: 0 auto 30px;
+    background: yellow;
+    width: 500px;
+    text-align: center;
+}

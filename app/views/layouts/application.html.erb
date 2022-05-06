@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>WarehouseApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>WarehouseApp</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application" %>
-  </head>
+  <%= stylesheet_link_tag "application" %>
+</head>
 
-  <body>
-    <header>
-      <h1> Galpões & Estoque </h1>
-    </header>
+<body>
+<header>
+  <h1> Galpões & Estoque </h1>
+</header>
 
-    <main>
-      <%= yield %>
-    </main>
+<main>
+  <div id = 'notice'>
+    <%= notice %>
+  </div>
+  <%= yield %>
+</main>
 
-  </body>
+</body>
 </html>
