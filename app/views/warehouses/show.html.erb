@@ -5,7 +5,9 @@
   <p><strong>Cidade: </strong> <%= @warehouse.city %></p>
   <p><strong>Area: </strong> <%= @warehouse.area %> m2</p>
   <p><strong>Endereco: </strong> <%= @warehouse.address %> <strong>CEP: </strong> <%= @warehouse.zip_code %></p>
-
 </div>
 
+<div id = 'links'>
+<%= link_to('Editar', edit_warehouse_path(@warehouse)) %>
 <%= link_to('Voltar', '/') %>
+</div>

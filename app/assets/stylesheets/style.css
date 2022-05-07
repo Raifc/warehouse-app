@@ -44,9 +44,17 @@ p, dl, dt, dd {
     margin: 0 auto 10px;
 }
 
-#notice {
+#notice, #new_errors {
     margin: 0 auto 30px;
     background: yellow;
     width: 500px;
     text-align: center;
 }
+
+
+#links{
+    margin: 0 auto 30px;
+    width: 500px;
+    text-align: center;
+}
+
