@@ -3,7 +3,9 @@ require 'rails_helper'
 describe 'Usuário cadastra um novo fornecedor' do
   it 'a partir do menu' do
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     click_on 'Cadastrar Fornecedor'
 
     expect(page).to have_field('Nome Fantasia')
@@ -17,7 +19,9 @@ describe 'Usuário cadastra um novo fornecedor' do
 
   it 'com sucesso' do
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     click_on 'Cadastrar Fornecedor'
 
     fill_in 'Razão Social', with: 'Dell Brasil'
@@ -40,7 +44,9 @@ describe 'Usuário cadastra um novo fornecedor' do
 
   it 'com CNPJ incorreto' do
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     click_on 'Cadastrar Fornecedor'
 
     fill_in 'Razão Social', with: 'Dell Brasil'
@@ -63,7 +69,9 @@ describe 'Usuário cadastra um novo fornecedor' do
                                 state: 'SP', email: 'dell@dell.com', phone: '1129999999', trade_name: 'Alienware')
 
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     click_on 'Cadastrar Fornecedor'
 
     fill_in 'Razão Social', with: 'Dell Brasil'
@@ -82,7 +90,9 @@ describe 'Usuário cadastra um novo fornecedor' do
 
   it 'com CNPJ em branco' do
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     click_on 'Cadastrar Fornecedor'
 
     fill_in 'Razão Social', with: 'Dell Brasil'

@@ -5,7 +5,9 @@ describe 'Usuário edita informações de um fornecedor' do
     supplier = Supplier.create!(corporate_name: 'Dell', registration_number: '3333333333333', full_address: 'Rua grande',
                                 city: 'São Paulo', state: 'SP', email: 'dell@dell.com', phone: '1129999999', trade_name: 'Alienware')
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     click_on 'Dell'
     click_on 'Editar'
 
@@ -24,7 +26,9 @@ describe 'Usuário edita informações de um fornecedor' do
                                 city: 'São Paulo', state: 'SP', email: 'dell@dell.com', phone: '1129999999', trade_name: 'Alienware')
 
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     click_on 'Dell'
     click_on 'Editar'
 
@@ -54,7 +58,9 @@ describe 'Usuário edita informações de um fornecedor' do
                                 city: 'São Paulo', state: 'SP', email: 'dell@dell.com', phone: '1129999999', trade_name: 'Alienware')
 
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     click_on 'Dell'
     click_on 'Editar'
 
@@ -82,7 +88,9 @@ describe 'Usuário edita informações de um fornecedor' do
                                 city: 'São Paulo', state: 'SP', email: 'dell@dell.com', phone: '1129999999', trade_name: 'Alienware')
 
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     click_on 'Dell'
     click_on 'Editar'
 
@@ -109,7 +117,9 @@ describe 'Usuário edita informações de um fornecedor' do
                                        state: 'PR', email: 'samsung@samsung.com', phone: '999999999', trade_name: 'Samsung Eletronics')
 
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     click_on 'Dell'
     click_on 'Editar'
 

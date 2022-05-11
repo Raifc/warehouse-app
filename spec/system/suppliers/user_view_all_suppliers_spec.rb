@@ -3,7 +3,9 @@ require 'rails_helper'
 describe 'Usuário vê todos os fornecedores cadastrados' do
   it 'nenhum fornecedor está cadastrado' do
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
 
     expect(page).to have_content 'Não existem fornecedores cadastrados!'
   end
@@ -15,7 +17,9 @@ describe 'Usuário vê todos os fornecedores cadastrados' do
                                        state: 'PR', email: 'samsung@samsung.com', phone: '999999999', trade_name: 'Samsung Eletronics')
 
     visit root_path
-    click_on 'Fornecedores'
+    within('nav') do
+      click_on 'Fornecedores'
+    end
     expect(page).to have_content 'Dell'
     expect(page).to have_content 'Alienware'
     expect(page).to have_content '3333333333333'
