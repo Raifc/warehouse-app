@@ -7,7 +7,7 @@
   <p><strong>Endereco: </strong> <%= @warehouse.address %> <strong>CEP: </strong> <%= @warehouse.zip_code %></p>
 </div>
 
-<div id = 'links'>
+<div class = 'links'>
 <%= link_to('Editar', edit_warehouse_path(@warehouse)) %>
 <%= link_to('Voltar', '/') %>
 <%= button_to('Remover', warehouse_path(@warehouse), method: :delete) %>
