@@ -12,7 +12,7 @@
     <tbody>
     <% @suppliers.each do |supplier| %>
       <tr>
-        <td> <%= supplier.corporate_name %></td>
+        <td> <%= link_to(supplier.corporate_name, supplier_path(supplier.id)) %></td>
         <td> <%= supplier.trade_name %></td>
         <td> <%= supplier.registration_number %></td>
       </tr>
@@ -23,6 +23,6 @@
   <p> Não existem fornecedores cadastrados!</p>
 <% end %>
 
-<div class = 'links'>
-<%= link_to 'Cadastrar Fornecedor', new_supplier_path %>
+<div class='links'>
+  <%= link_to 'Cadastrar Fornecedor', new_supplier_path %>
 </div>

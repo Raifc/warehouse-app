@@ -1,4 +1,6 @@
 class SuppliersController < ApplicationController
+  before_action :set_supplier, only: [:show, :edit, :update]
+
   def new
     @supplier = Supplier.new
   end
@@ -8,6 +10,15 @@ class SuppliersController < ApplicationController
   end
 
   def show; end
+
+  def update
+    if @supplier.update(supplier_params)
+      redirect_to supplier_path(@supplier.id), notice: 'Fornecedor atualizado com sucesso'
+    else
+      flash.now[:notice] = 'Não foi possivel atualizar o fornecedor'
+      render 'edit'
+    end
+  end
 
   def create
     @supplier = Supplier.new(supplier_params)
@@ -22,7 +33,7 @@ class SuppliersController < ApplicationController
 
   def edit; end
 
-  def update; end
+  private
 
   def set_supplier
     @supplier = Supplier.find(params[:id])
